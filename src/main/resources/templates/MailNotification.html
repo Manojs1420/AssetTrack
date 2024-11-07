@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spring boot eamil teplate with Thymeleaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css' />
+<!-- use the font -->
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+th {
+	background-color: black;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: aqua !important;
+}
+</style>
+</head>
+<body>
+
+
+	<div style="background-color: lightgrey">
+
+		<p style="font-size: 18px">Dear User,</p>
+
+		<p style="font-size: 18px">Service Request Details</p>
+		<table>
+
+			<tbody>
+				<tr>
+					<td>Service Request No</td>
+					<td th:text="${Request}"></td>
+				</tr>
+
+				<tr>
+					<td>Urgency</td>
+					<td th:text="${Urgency}"></td>
+				</tr>
+
+				<tr>
+					<td>User Name</td>
+					<td th:text="${userName}"></td>
+				</tr>
+
+				<tr>
+					<td>Lattitude - Longitude</td>
+					<td ><a th:href="${GeoLocPath}"><p th:text= "${GeoLoc}"></p></a></td>					
+				</tr>
+
+				<tr>
+					<td>Equipment Name</td>
+					<td th:text="${EquipmentName}"></td>
+				</tr>
+
+				<tr>
+					<td>Asset Brand Name</td>
+					<td th:text="${BrandName}"></td>
+				</tr>
+
+				<tr>
+					<td>Model No</td>
+					<td th:text="${Model}"></td>
+				</tr>
+
+
+				<tr>
+					<td>Asset Code</td>
+					<td th:text="${Asset}"></td>
+				</tr>
+
+
+				<tr>
+					<td>ER No</td>
+					<td th:text="${ERNo}"></td>
+				</tr>
+
+
+				<tr>
+					<td>Vendor Name</td>
+					<td th:text="${VendorName}"></td>
+				</tr>
+
+				<tr>
+					<td>Vendor Contact</td>
+					<td th:text="${VendorContact}"></td>
+				</tr>
+
+				<tr>
+					<td>Issue Raised Date</td>
+					<td th:text="${Issueraiseddate}"></td>
+				</tr>
+
+				<tr>
+					<td>Notification Age</td>
+					<td th:text="${ServiceAge}"></td>
+				</tr>
+
+
+				<tr>
+					<td>Problem Description</td>
+					<td th:text="${ProblemDescription}"></td>
+				</tr>
+
+				<tr th:if="${ReopenCondition}">
+					<td>Issue Reopen Date</td>
+					<td th:text="${IssueReopendate}"></td>
+				</tr>
+
+
+				<tr th:if="${ReopenCondition}">
+					<td>Reason For Re-open</td>
+					<td th:text="${RegionForOpen}"></td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+
+	<div th:if="${condition}">
+		<p>
+			If you are not accepted with the service - please <a
+				href="https://nunxtwav.titan.in/">Click here</a> to re-open the
+			notification
+		</p>
+	</div>
+</body>
+</html>

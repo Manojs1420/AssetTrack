@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spring boot Maintainance email template with Thymeleaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css' />
+<!-- use the font -->
+<style>
+table {
+	font-family: arial, sans-serif;
+	}
+.test{
+	text-align: justify;
+}
+td, th {
+	border: 0px white;
+	text-align: left;
+	
+}
+
+th {
+	
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: aqua !important;
+}
+</style>
+</head>
+<body>
+	<div style="background-color: white">
+
+		<p style="font-size: 18px">Dear User,</p>
+
+		<p style="font-size: 18px">
+		
+		<table>
+
+			
+				<tr>
+					<td>Service due for the </td>
+					<td class="test" th:text="${EquipmentName}"></td>
+					
+					
+					<td class="test" th:text="${ErNo}">,</td>
+				
+					<td class="test" th:text="${StoreCode}">,</td>
+					
+					<td class="test" th:text="${Location}">,</td>
+					
+					<td class="test" th:text="${Fromperiod}"></td><td> To </td>
+					
+					<td class="test" th:text="${ToPeriod}"></td>
+					
+					
+				</tr>
+			
+		</table>
+		</p><br>
+		<p style="font-size: 18px; text-align: center;">To access Nunxtwav application : <a href="https://nunxtwav.titan.in/">https://nunxtwav.titan.in/</p>
+	<br>
+	<p style="font-size: 18px; color:red;">This is an auto generated mail, hence no need to reply.</p>
+	</div>
+
+</body>
+</html>

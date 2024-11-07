@@ -1,0 +1,74 @@
+#
+#
+## Spring SMTP Mail Configutaion
+##spring:
+# # mail:
+#    # Mail Server HOST URL
+#  #  host: mail.rim-global.com 
+#    # Mail Server PORT
+#    #995
+#   # port: 465 
+#    #username: shashank.hn@rim-global.com
+#    #password: Rim@3d10!
+#    #properties:
+#     # mail:
+#      #  smtp:
+#        # Switch authorisation on (true) or off (false)
+#       #   auth: false
+#          # Switch TLS encryption on (true) or off (false)
+#        #  starttls:
+#         #   enable: true
+#          #  required: true
+#         # ssl:
+#          #  enable: true
+#          #checkserveridentity: true
+#         # trust: //*
+#        # Switch debug logging of spring mailcomponent on (true) or off (false)
+#        #debug: true 
+#        # Protocol
+#       # transport:
+#        #  protocol: smtp
+#        #smtps:
+#         # ssl:
+#          #  checkserveridentity: true
+#           # trust: //*    
+#           
+## Spring GMail Configutaion
+#spring:
+#  mail:
+#    # Mail Server HOST URL
+#    host: smtp.gmail.com 
+#    # Mail Server PORT
+#    port: 465
+#    username: nxtwavcare@gmail.com
+#    password: Prestige@123
+#    properties:
+#      mail:
+#        smtp:
+#        # Switch authorisation on (true) or off (false)
+#          auth: false
+#          # Switch TLS encryption on (true) or off (false)
+#          starttls:
+#            enable: true
+#            required: true
+#          ssl:
+#            enable: true
+#          checkserveridentity: true
+#          trust: //*
+#        # Switch debug logging of spring mailcomponent on (true) or off (false)
+#        debug: true 
+#        # Protocol
+#        transport:
+#          protocol: smtp
+#        smtps:
+#          ssl:
+#            checkserveridentity: true
+#            trust: //*               
+#
+#  eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+#       
+#        

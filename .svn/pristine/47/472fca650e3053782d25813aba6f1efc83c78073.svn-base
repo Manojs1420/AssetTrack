@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spring boot Inventory QR Code template with Thymeleaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css' />
+<!-- use the font -->
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	border: 1px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+th {
+padding: 8px;
+border: 1px solid black;
+	background-color: white;
+	color: red;
+align: center;
+}
+
+tr:nth-child(even) {
+	background-color: aqua !important;
+}
+</style>
+</head>
+<body>
+	<div style="background-color: white">
+
+	<!--  	<p style="font-size: 18px">Dear User,</p> -->
+		<table>
+
+			<tbody>
+ 
+  <tr>
+<td>Store Code</td>
+<td th:text="${Store Code}"></td>
+
+    <th rowspan="5">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Titan_Company_Logo.png/180px-Titan_Company_Logo.png"/>
+<img src="${pathName}"/></th>
+  
+  </tr>
+  <tr>
+    <td>Asset Code</td>
+<td th:text="${Asset Code}"></td>
+  </tr>
+<tr ><td>Equipment Name</td>
+			<td th:text="${Equipment Name}"></td>
+
+</tr>
+<tr ><td>Er No</td>
+			<td th:text="${Er No}"></td>
+
+</tr>
+<tr ><td>Installation date</td>
+			<td th:text="${Installation date}"></td>
+
+</tr>
+
+<!--
+				<tr>
+
+					<td>Store Code</td>
+					<td th:text="${Vertical type}"></td>
+				</tr>
+					<tr>
+
+					<td>Asset Code</td>
+					<td th:text="${Store Name}"></td>
+
+
+
+				</tr>
+				
+				<tr>
+
+					<td>Asset Name</td>
+					<td th:text="${Store Code}"></td>
+
+
+
+
+				</tr>
+					
+	-->		
+			
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

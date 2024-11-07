@@ -1,0 +1,32 @@
+package com.titan.irgs.serviceRequest.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class BreakDownType {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long breakDownTypeId;
+	private String breakDownTypeName;
+	
+	public Long getBreakDownTypeId() {
+		return breakDownTypeId;
+	}
+	public void setBreakDownTypeId(Long breakDownTypeId) {
+		this.breakDownTypeId = breakDownTypeId;
+	}
+	public String getBreakDownTypeName() {
+		return breakDownTypeName;
+	}
+	public void setBreakDownTypeName(String breakDownTypeName) {
+		this.breakDownTypeName = breakDownTypeName;
+	}
+	
+	
+	
+
+}

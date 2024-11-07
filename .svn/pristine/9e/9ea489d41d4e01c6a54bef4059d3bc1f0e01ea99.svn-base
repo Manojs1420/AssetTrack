@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spring boot Inventory QR Code template with Thymeleaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css' />
+<!-- use the font -->
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+th {
+	background-color: black;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: aqua !important;
+}
+</style>
+</head>
+<body>
+	<div style="background-color: lightgrey">
+
+	<!--  	<p style="font-size: 18px">Dear User,</p>
+-->
+		<p style="font-size: 18px">Inventory Details</p>
+		<table>
+
+			<tbody>
+				<tr>
+					<td>Vertical type</td>
+					<td th:text="${Vertical type}"></td>
+				</tr>
+					<tr>
+					<td>Store Name</td>
+					<td th:text="${Store Name}"></td>
+				</tr>
+				
+				<tr>
+					<td>Store Code</td>
+					<td th:text="${Store Code}"></td>
+				</tr>
+					<tr>
+					<td>Asset Name</td>
+					<td th:text="${Asset Name}"></td>
+				</tr>
+				<tr>
+					<td>Asset Specification Name</td>
+					<td th:text="${Asset Specification Name}"></td>
+				</tr>
+					<tr>
+					<td>Brand Name</td>
+					<td th:text= "${Brand Name}"></td>					
+				</tr>
+								<tr>
+					<td>Model Name</td>
+					<td th:text="${Model Name}"></td>
+				</tr>
+
+					<tr>
+					<td>FAR No</td>
+					<td th:text="${FAR No}"></td>
+				</tr>
+
+				<tr>
+					<td>ER No</td>
+					<td th:text="${ER No}"></td>
+				</tr>
+				<tr>
+					<td>Quantity</td>
+					<td th:text="${Quantity}"></td>
+				</tr>
+				
+				
+				<tr>
+					<td>Vendor Name</td>
+					<td th:text="${Vendor Name}"></td>
+				</tr>
+
+				<tr>
+					<td>Installation Date</td>
+					<td th:text="${Installation Date}"></td>
+				</tr>
+
+				<tr>
+					<td>Warranty Period</td>
+					<td th:text="${Warranty Period}"></td>
+				</tr>
+
+				<tr>
+					<td>Warranty End Date</td>
+					<td th:text="${Warranty End Date}"></td>
+				</tr>
+
+	<tr>
+					<td>AMC Status</td>
+					<td th:text="${AMC Status}"></td>
+				</tr>
+				<tr>
+					<td>Maintainance type</td>
+					<td th:text="${Maintainance type}"></td>
+				</tr>
+
+				<tr>
+					<td>Maintainance From Date</td>
+					<td th:text="${Maintainance Start Date}"></td>
+				</tr>
+
+						<tr>
+					<td>Maintainance To Date</td>
+					<td th:text="${Maintainance End Date}"></td>
+				</tr>
+				
+					<tr>
+					<td>Number of Services</td>
+					<td th:text="${Number of Services}"></td>
+				</tr>
+				<tr>
+					<td>Maintainance Gap(day)</td>
+					<td th:text="${Maintainance Gap}"></td>
+				</tr>
+
+				<tr>
+					<td>Maintainance Period(day)</td>
+					<td th:text="${Maintainance Period}"></td>
+				</tr>
+
+				<tr>
+					<td>Maintainance Validity</td>
+					<td th:text="${Maintainance Validity}"></td>
+				</tr>
+
+				<tr>
+					<td>Contact Number</td>
+					<td th:text="${Contact Number}"></td>
+				</tr>
+
+				<tr>
+					<td>Description</td>
+					<td th:text="${Description}"></td>
+				</tr>
+
+			
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
